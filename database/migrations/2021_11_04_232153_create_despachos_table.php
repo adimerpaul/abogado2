@@ -18,7 +18,7 @@ class CreateDespachosTable extends Migration
             $table->date("fecha");
             $table->time("hora");
             $table->string("tipo");
-            $table->string("juzgano");
+            $table->string("juzgado");
             $table->string("webid");
             $table->string("nurej");
             $table->string("proceso");

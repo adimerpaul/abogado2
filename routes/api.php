@@ -30,5 +30,13 @@ Route::group(['middleware'=>'auth:sanctum'],function (){
     Route::post('/misremetentes',[\App\Http\Controllers\UserController::class,'misremetentes']);
     Route::post('/usuarios',[\App\Http\Controllers\UserController::class,'usuarios']);
     Route::resource('/permiso',\App\Http\Controllers\PermisoController::class);
+
+    Route::resource('/despacho',\App\Http\Controllers\DespachoController::class);
+    Route::resource('/cliente',\App\Http\Controllers\ClienteController::class);
+    Route::resource('/tramite',\App\Http\Controllers\TramiteController::class);
+    Route::resource('/ingreso',\App\Http\Controllers\IngresoController::class);
+    Route::resource('/egreso',\App\Http\Controllers\EgresoController::class);
+    Route::resource('/requisitos',\App\Http\Controllers\RequisitoController::class);
+
 });
 

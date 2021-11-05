@@ -14,7 +14,7 @@ class DespachoController extends Controller
      */
     public function index()
     {
-        //
+        return Despacho::all();
     }
 
     /**
