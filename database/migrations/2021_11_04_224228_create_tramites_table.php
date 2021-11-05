@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientesTable extends Migration
+class CreateTramitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateClientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('tramites', function (Blueprint $table) {
             $table->id();
-            $table->string('ci')->default('')->nullable();
             $table->string('nombre');
-            $table->string('tipo')->default("PERSONA");
-            $table->string('imagen')->default("")->nullable();
+            $table->string('tipo')->default("TRAMITE");
+            $table->string('valor')->default(1000);
+            $table->string('procedimiento')->default('Los requisitos se deven presentar en ventanilla unica');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateClientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('tramites');
     }
 }

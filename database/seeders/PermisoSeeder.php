@@ -15,10 +15,10 @@ class PermisoSeeder extends Seeder
     public function run()
     {
         DB::table('permisos')->insert([
-            ["nombre"=>'Control de usuarios'],
-            ["nombre"=>'Registrar correspondencia'],
-            ["nombre"=>'Mis designaciones'],
-            ["nombre"=>'Realizar seguimiento'],
+            ["nombre"=>'Registrar cliente'],
+            ["nombre"=>'Controlar Tramites'],
+            ["nombre"=>'Agregar Ingresos'],
+            ["nombre"=>'Agregar Egresos'],
         ]);
     }
 }
